@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArbCare Tree Surgery | Professional Tree Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --dark-green: #1a3d1a;
+            --medium-green: #2d5a2d;
+            --light-green: #4a7c4a;
+            --accent-green: #6ba86b;
+            --pale-green: #e8f5e8;
+            --urgent-red: #d9534f;
+            --text-dark: #333;
+            --text-light: #fff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #f9f9f9;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--light-green);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: var(--medium-green);
+            transform: translateY(-2px);
+        }
+
+        .btn-call {
+            background-color: #c9302c;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        .btn-call:hover {
+            background-color: #c9302c;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-green);
+            margin: 15px auto 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--dark-green);
+            color: var(--text-light);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .logo span {
+            color: var(--accent-green);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 61, 26, 0.7), rgba(26, 61, 26, 0.6)), url('https://images.pexels.com/photos/218673/pexels-photo-218673.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 180px 0 100px;
+            margin-top: 1px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--dark-green);
+        }
+
+        /* Emergency Section - Made thinner */
+        .emergency {
+            background-color: var(--urgent-red);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .emergency-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .emergency-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        .emergency-text h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .emergency-text p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+
+        .emergency-contact {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .emergency-contact i {
+            font-size: 1.5rem;
+        }
+
+        .emergency-contact .phone {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        /* Trust Indicators */
+        .trust-indicators {
+            background-color: white;
+            padding: 40px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .indicators-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .indicator {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .indicator i {
+            font-size: 2.5rem;
+            color: var(--accent-green);
+            margin-bottom: 15px;
+        }
+
+        .indicator h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .indicator p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--pale-green);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 20px;
+        }
+
+        .service-content h3 {
+            color: var(--medium-green);
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: white;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            background-color: var(--pale-green);
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: #ddeedd;
+        }
+
+        .faq-question h3 {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background-color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 61, 26, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background-color: var(--pale-green);
+        }
+
+        .reviews-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+        }
+
+        .review-card {
+            flex: 0 0 350px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            scroll-snap-align: start;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .review-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .review-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .review-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .review-stars {
+            color: #ffc107;
+        }
+
+        /* Map Section */
+        .map {
+            background-color: white;
+            padding: 80px 0;
+        }
+
+        .map-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .map-wrapper {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .service-areas {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--pale-green);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .service-areas h3 {
+            color: var(--medium-green);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .area-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .area-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .area-item i {
+            color: var(--accent-green);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        /* Certification Section */
+        .certifications {
+            background-color: var(--pale-green);
+            padding: 60px 0;
+        }
+
+        .cert-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .cert-item {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .cert-item i {
+            font-size: 3rem;
+            color: var(--medium-green);
+            margin-bottom: 15px;
+        }
+
+        .cert-item h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .cert-item p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(rgba(26, 61, 26, 0.9), rgba(26, 61, 26, 0.8)), url('pexels-joecory94-6653820.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-green);
+            color: var(--text-light);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: var(--accent-green);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .contact-info li i {
+            margin-right: 10px;
+            color: var(--accent-green);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-green);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+            
+            .emergency-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .emergency-text {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--dark-green);
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease;
+            }
+
+            nav.active {
+                max-height: 300px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 20px 0;
+            }
+
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .map-container {
+                flex-direction: column;
+            }
+            
+            .indicators-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                margin-bottom: 30px;
+            }
+            
+            .emergency-contact {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+
+        /* Cookie Banner Styles */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1a365d;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.cookie-banner.active {
+    display: block;
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.cookie-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cookie-text p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cookie-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-accept {
+    background-color: #58857f;
+    color: white;
+}
+
+.btn-accept:hover {
+    background-color: #4a726c;
+}
+
+.btn-reject {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-reject:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-preferences {
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+}
+
+.cookie-preferences {
+    display: none;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cookie-preferences.active {
+    display: block;
+}
+
+.preference-group {
+    margin-bottom: 15px;
+}
+
+.preference-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.preference-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.preference-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.preference-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.preference-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .preference-slider {
+    background-color: #58857f;
+}
+
+input:checked + .preference-slider:before {
+    transform: translateX(26px);
+}
+
+.preference-necessary {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cookie-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .cookie-btn {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+    
+<body class="min-h-screen font-poppins">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="cookieBanner" class="cookie-banner">
+    <div class="cookie-content">
+        <div class="cookie-text">
+            <p>We use cookies to enhance your experience on our website. Some cookies are necessary for the website to function properly and cannot be switched off. You can set your preferences and learn more about our use of cookies in our <a href="privacy.html" style="color: #58857f; text-decoration: underline;">Cookie Policy</a>.</p>
+            
+            <div id="cookiePreferences" class="cookie-preferences">
+                <div class="preference-group">
+                    <label>
+                        <span class="preference-toggle">
+                            <input type="checkbox" id="preferenceNecessary" checked disabled>
+                            <span class="preference-slider"></span>
+                        </span>
+                        Necessary Cookies
+                        <span class="preference-necessary">(Always active)</span>
+                    </label>
+                    <p class="preference-desc">Essential for the website to function properly. Cannot be disabled.</p>
+                </div>
+                
+                <div class="preference-group">
+                    <label>
+                        <span class="preference-toggle">
+                            <input type="checkbox" id="preferenceAnalytics">
+                            <span class="preference-slider"></span>
+                        </span>
+                        Analytics Cookies
+                    </label>
+                    <p class="preference-desc">Allow us to analyze website usage to improve performance.</p>
+                </div>
+                
+                <div class="preference-group">
+                    <label>
+                        <span class="preference-toggle">
+                            <input type="checkbox" id="preferenceMarketing">
+                            <span class="preference-slider"></span>
+                        </span>
+                        Marketing Cookies
+                    </label>
+                    <p class="preference-desc">Used to track visitors across websites for marketing purposes.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cookie-buttons">
+            <button class="cookie-btn btn-accept" id="acceptAll">Accept All</button>
+            <button class="cookie-btn btn-reject" id="rejectNonEssential">Reject Non-Essential</button>
+            <button class="cookie-btn btn-preferences" id="managePreferences">Preferences</button>
+            <button class="cookie-btn btn-accept" id="savePreferences" style="display: none;">Save Preferences</button>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-tree" style="font-size: 2rem; color: var(--accent-green); margin-right: 10px;"></i>
+                <h1>Arb<span>Care</span></h1>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Professional Tree Care Services</h2>
+            <p>ArbCare provides expert tree surgery services with over 15 years of experience. We're committed to safety, quality, and environmental responsibility.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Get a Free Quote</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section - Made thinner with call button -->
+    <section class="emergency">
+        <div class="container">
+            <div class="emergency-content">
+                <div class="emergency-text">
+                    <h3>24/7 Emergency Tree Services</h3>
+                    <p>Storm damage? Fallen tree? We provide immediate response for hazardous tree situations.</p>
+                </div>
+                <div class="emergency-contact">
+                    
+                    <div class="phone">07584 71900</div>
+                    <a href="tel:+44 7584 719000" class="btn btn-call">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About ArbCare</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>ArbCare Tree Surgery was founded in 2008 by John Arbinson, a certified arborist with a passion for preserving and maintaining the natural beauty of our environment. What started as a one-person operation has grown into a team of highly skilled professionals dedicated to providing the highest quality tree care services.</p>
+                    <p>Our mission is to enhance and preserve the natural landscape through expert tree care while prioritizing safety and environmental sustainability. We take pride in our work and are committed to building lasting relationships with our clients based on trust and exceptional service.</p>
+                    <p>All our arborists are fully qualified and insured, staying up-to-date with the latest industry standards and techniques to ensure the best possible care for your trees.</p>
+                    <a href="tel:+44 7584 719000" class="btn">Contact Us Today</a>
+                </div>
+                <div class="about-image">
+                    <img src="pexels-jacky-2803806-6218318.jpg" alt="Arborist at work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Trust Indicators -->
+    <section class="trust-indicators">
+        <div class="container indicators-container">
+            <div class="indicator">
+                <i class="fas fa-check-circle"></i>
+                <h3>Free Consultation</h3>
+                <p>No-obligation assessment of your tree care needs</p>
+            </div>
+            <div class="indicator">
+                <i class="fas fa-user-tie"></i>
+                <h3>Trusted Experts</h3>
+                <p>Fully qualified and insured tree care professionals</p>
+            </div>
+            <div class="indicator">
+                <i class="fas fa-pound-sign"></i>
+                <h3>Compare Quotes</h3>
+                <p>Transparent pricing with no hidden costs</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="pexels-umkreisel-app-1459495.jpg" alt="Tree Pruning">
+                    </div>
+                    <div class="service-content">
+                        <h3>Tree Pruning</h3>
+                        <p>Expert pruning to maintain tree health, improve structure, and enhance appearance while ensuring safety. We carefully remove dead, diseased, or crossing branches to promote healthy growth and reduce risk.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="pexels-adam-lemberg-153005-529853.jpg" alt="Tree Removal">
+                    </div>
+                    <div class="service-content">
+                        <h3>Tree Removal</h3>
+                        <p>Safe and efficient tree removal services for hazardous, diseased, or unwanted trees. We use advanced techniques to dismantle trees piece by piece in confined spaces, ensuring minimal impact on your property.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="pexels-khaydenarts-923167.jpg" alt="Stump Grinding">
+                    </div>
+                    <div class="service-content">
+                        <h3>Stump Grinding</h3>
+                        <p>Complete stump removal to clear your landscape and prevent regrowth or pest issues. Our powerful grinders mulch stumps below ground level, leaving your garden ready for new planting or landscaping.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="pexels-mikebirdy-5351112.jpg" alt="Emergency Services">
+                    </div>
+                    <div class="service-content">
+                        <h3>Emergency Services</h3>
+                        <p>24/7 emergency response for storm-damaged or hazardous trees that pose immediate risk. Our rapid response teams are equipped to handle dangerous situations safely and efficiently.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="pexels-pixabay-51329.jpg" alt="Tree Health Assessment">
+                    </div>
+                    <div class="service-content">
+                        <h3>Tree Health Assessment</h3>
+                        <p>Comprehensive evaluation of tree health, identifying diseases, pests, and structural issues. Our detailed reports help you make informed decisions about tree care and preservation.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="pexels-joecory94-6653820.jpg" alt="Hedge Maintenance">
+                    </div>
+                    <div class="service-content">
+                        <h3>Hedge Maintenance</h3>
+                        <p>Professional hedge trimming and shaping to keep your landscape looking its best. We work with all hedge types, from formal garden boundaries to natural wildlife-friendly screens.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What does a tree surgeon actually do?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our tree surgeons are hands-on professionals skilled in trimming, pruning, felling, and sometimes planting trees. Every day brings different challenges - from assessing risks and checking habitats to safely removing problematic branches. It's not just about chainsaws; we conduct thorough risk assessments, ensure wildlife protection, and provide solutions that balance safety with environmental care.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I tell if a tree needs removing?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Look for warning signs like leaning trunks, mushrooms at the base, or cracks in major limbs. A sparse canopy or early yellowing leaves can also indicate health issues. Some problems are obvious, while others like internal rot may be invisible. It's always better to have a professional assessment than risk unexpected damage during storms.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need permission to remove a tree?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sometimes, yes! Trees in conservation areas or those with Tree Preservation Orders require council approval before any work. We always check local regulations and can liaise with council officers on your behalf. It's also courteous to discuss plans with neighbours if roots extend into their property.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is stump grinding really necessary after tree removal?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Leftover stumps often become trip hazards, eyesores, or homes for pests and fungi. Grinding eliminates regrowth, clears the site completely, and gives your garden a fresh start. Unless you want ongoing maintenance issues, we recommend proper stump removal.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I choose a trustworthy tree surgeon?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Look for professionals with public liability insurance, NPTC/Lantra certifications, and genuine customer reviews. Real experts provide risk assessments, clear quotes, and reliable service. Avoid operators offering suspiciously cheap deals - quality tree care requires proper training and equipment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications">
+        <div class="container">
+            <h2 class="section-title">Our Certifications & Standards</h2>
+            <div class="cert-container">
+                <div class="cert-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Fully Insured</h3>
+                    <p>£5 million public liability insurance for your peace of mind</p>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>NPTC Certified</h3>
+                    <p>All our arborists hold current NPTC qualifications</p>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Eco-Friendly</h3>
+                    <p>Committed to sustainable practices and waste recycling</p>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-award"></i>
+                    <h3>Quality Assured</h3>
+                    <p>Consistently high standards across all our services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="pexels-jacky-2803806-6218318.jpg" alt="Tree work">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="pexels-jacky-2803806-6218318.jpg" alt="Tree removal">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="pexels-jacky-2803806-6218318.jpg" alt="Stump grinding">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="pexels-jacky-2803806-6218318.jpg" alt="Tree pruning">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="pexels-jacky-2803806-6218318.jpg" alt="Hedge maintenance">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="pexels-jacky-2803806-6218318.jpg" alt="Emergency tree work">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div class="review-info">
+                            <h4>Sarah Johnson</h4>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"ArbCare removed a large oak tree from my backyard that was dangerously close to my house. They were professional, efficient, and left the area spotless. Highly recommended!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Thompson">
+                        </div>
+                        <div class="review-info">
+                            <h4>Michael Thompson</h4>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"The team at ArbCare did an excellent job pruning our mature trees. They took the time to explain the process and their expertise was evident throughout. Will definitely use them again."</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Wilson">
+                        </div>
+                        <div class="review-info">
+                            <h4>Emma Wilson</h4>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"After a storm damaged several trees on our property, ArbCare responded quickly to our emergency call. They safely removed the hazardous limbs and cleaned up thoroughly. Excellent service!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="David Roberts">
+                        </div>
+                        <div class="review-info">
+                            <h4>David Roberts</h4>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"We've used ArbCare for regular tree maintenance for years. They're always punctual, professional, and do quality work. Their knowledge of tree health is impressive."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section with Service Areas -->
+    <section class="map" id="contact">
+        <div class="container">
+            <h2 class="section-title">Areas We Cover</h2>
+            <div class="map-container">
+                <div class="map-wrapper">
+                    <!-- Google Maps iframe -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151657.1748791488!2d-1.613095665132078!3d53.56413369476631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487962b7c1b768c3%3A0xc2476c02bf53d08a!2sBarnsley!5e0!3m2!1sen!2suk!4v1760017082932!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="service-areas">
+                    <h3>Our Service Areas</h3>
+                    <div class="areas-grid">
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Barnsley</div>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Doncaster</div>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Sheffield</div>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Rotherham</div>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Wakefield</div>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Worksop</div>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Berkshire</div>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Mexborough</div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px; text-align: center; font-size: 0.9rem;">We serve these areas and surrounding regions. Contact us to check if we cover your location.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Outdoor Space?</h2>
+            <p>Get a free, no-obligation quote from our tree care experts today</p>
+            <div class="hero-btns">
+             
+                <a href="tel:+44 7584 719000" class="btn btn-secondary">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ArbCare Tree Surgery</h3>
+                    <p>Providing professional tree care services with over 15 years of experience. Committed to safety, quality, and environmental responsibility.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/p/Arbcare-TREE-surgery-100089902563249"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Tree Pruning</a></li>
+                        <li><a href="#">Tree Removal</a></li>
+                        <li><a href="#">Stump Grinding</a></li>
+                        <li><a href="#">Emergency Services</a></li>
+                        <li><a href="#">Tree Health Assessment</a></li>
+                        <li><a href="#">Hedge Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>51 Pym Road Mexborough , Mexborough, United Kingdom</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+44 7584 719000</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>arbcare@aol.co.uk</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ArbCare Tree Surgery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+                
+                // Close all answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('active');
+                });
+                
+                // If the clicked question wasn't active, open it
+                if (!isActive) {
+                    answer.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+ <script>
+        // Cookie Consent Management
+document.addEventListener('DOMContentLoaded', function() {
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookiePreferences = document.getElementById('cookiePreferences');
+    const acceptAllBtn = document.getElementById('acceptAll');
+    const rejectNonEssentialBtn = document.getElementById('rejectNonEssential');
+    const managePreferencesBtn = document.getElementById('managePreferences');
+    const savePreferencesBtn = document.getElementById('savePreferences');
+    const analyticsCheckbox = document.getElementById('preferenceAnalytics');
+    const marketingCheckbox = document.getElementById('preferenceMarketing');
+    
+    // Check if user has already made a choice
+    if (!getCookie('cookie_consent')) {
+        // Show banner if no consent decision has been made
+        setTimeout(() => {
+            cookieBanner.classList.add('active');
+        }, 1000);
+    } else {
+        // Load cookies based on previous consent
+        loadCookiesAccordingToConsent();
+    }
+    
+    // Accept all cookies
+    acceptAllBtn.addEventListener('click', function() {
+        setCookie('cookie_consent', 'all', 365);
+        setCookie('cookie_analytics', 'true', 365);
+        setCookie('cookie_marketing', 'true', 365);
+        cookieBanner.classList.remove('active');
+        loadCookiesAccordingToConsent();
+    });
+    
+    // Reject non-essential cookies
+    rejectNonEssentialBtn.addEventListener('click', function() {
+        setCookie('cookie_consent', 'necessary', 365);
+        setCookie('cookie_analytics', 'false', 365);
+        setCookie('cookie_marketing', 'false', 365);
+        cookieBanner.classList.remove('active');
+        loadCookiesAccordingToConsent();
+    });
+    
+    // Show preferences panel
+    managePreferencesBtn.addEventListener('click', function() {
+        cookiePreferences.classList.add('active');
+        managePreferencesBtn.style.display = 'none';
+        savePreferencesBtn.style.display = 'block';
+        
+        // Set checkboxes based on current preferences
+        const analyticsConsent = getCookie('cookie_analytics');
+        const marketingConsent = getCookie('cookie_marketing');
+        
+        if (analyticsConsent === 'true') analyticsCheckbox.checked = true;
+        if (marketingConsent === 'true') marketingCheckbox.checked = true;
+    });
+    
+    // Save preferences
+    savePreferencesBtn.addEventListener('click', function() {
+        setCookie('cookie_consent', 'custom', 365);
+        setCookie('cookie_analytics', analyticsCheckbox.checked ? 'true' : 'false', 365);
+        setCookie('cookie_marketing', marketingCheckbox.checked ? 'true' : 'false', 365);
+        
+        cookiePreferences.classList.remove('active');
+        savePreferencesBtn.style.display = 'none';
+        managePreferencesBtn.style.display = 'block';
+        cookieBanner.classList.remove('active');
+        
+        loadCookiesAccordingToConsent();
+    });
+    
+    // Function to get cookie value
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    
+    // Function to set cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = `expires=${date.toUTCString()}`;
+        document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax`;
+    }
+    
+    // Function to load cookies based on user consent
+    function loadCookiesAccordingToConsent() {
+        const consent = getCookie('cookie_consent');
+        const analytics = getCookie('cookie_analytics');
+        const marketing = getCookie('cookie_marketing');
+        
+        // Always load necessary cookies (these would be implemented as needed)
+        loadNecessaryCookies();
+        
+        // Load other cookies based on consent
+        if (consent === 'all' || (consent === 'custom' && analytics === 'true')) {
+            loadAnalyticsCookies();
+        }
+        
+        if (consent === 'all' || (consent === 'custom' && marketing === 'true')) {
+            loadMarketingCookies();
+        }
+    }
+    
+    // Placeholder functions for cookie loading - implement based on your specific cookies
+    function loadNecessaryCookies() {
+        // These are essential cookies that are always loaded
+        console.log('Loading necessary cookies...');
+    }
+    
+    function loadAnalyticsCookies() {
+        // Implement your analytics cookies here (e.g., Google Analytics)
+        console.log('Loading analytics cookies...');
+        // Example: Google Analytics initialization would go here
+        // if (typeof gtag !== 'undefined') { gtag('config', 'YOUR_GA_ID'); }
+    }
+    
+    function loadMarketingCookies() {
+        // Implement your marketing cookies here
+        console.log('Loading marketing cookies...');
+    }
+});
+    </script>
+
+</body>
+</html>

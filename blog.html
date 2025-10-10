@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Blog | ArbCare Tree Surgery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --dark-green: #1a3d1a;
+            --medium-green: #2d5a2d;
+            --light-green: #4a7c4a;
+            --accent-green: #6ba86b;
+            --pale-green: #e8f5e8;
+            --urgent-red: #d9534f;
+            --text-dark: #333;
+            --text-light: #fff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #f9f9f9;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--light-green);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: var(--medium-green);
+            transform: translateY(-2px);
+        }
+
+        .btn-call {
+            background-color: #c9302c;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        .btn-call:hover {
+            background-color: #c9302c;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--light-green);
+            color: var(--light-green);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--light-green);
+            color: white;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-green);
+            margin: 15px auto 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--dark-green);
+            color: var(--text-light);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .logo span {
+            color: var(--accent-green);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section - Same as index.html */
+        .hero {
+            background: linear-gradient(rgba(26, 61, 26, 0.7), rgba(26, 61, 26, 0.6)), url('https://images.pexels.com/photos/218673/pexels-photo-218673.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 180px 0 100px;
+            margin-top: 1px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary-hero {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-secondary-hero:hover {
+            background-color: white;
+            color: var(--dark-green);
+        }
+
+        /* Emergency Section - Same as index.html */
+        .emergency {
+            background-color: var(--urgent-red);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .emergency-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .emergency-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        .emergency-text h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .emergency-text p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+
+        .emergency-contact {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .emergency-contact i {
+            font-size: 1.5rem;
+        }
+
+        .emergency-contact .phone {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        /* Single Article Section */
+        .article {
+            background-color: white;
+        }
+
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-header {
+            margin-bottom: 40px;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+        }
+
+        .article-meta i {
+            margin-right: 5px;
+        }
+
+        .article-title {
+            color: var(--medium-green);
+            font-size: 2.2rem;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .article-image {
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .article-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .article-content h2 {
+            color: var(--medium-green);
+            margin: 40px 0 20px;
+            font-size: 1.6rem;
+        }
+
+        .article-content h3 {
+            color: var(--light-green);
+            margin: 30px 0 15px;
+            font-size: 1.3rem;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .article-content li {
+            margin-bottom: 10px;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid var(--accent-green);
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .article-cta {
+            background-color: var(--pale-green);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .article-cta h3 {
+            color: var(--medium-green);
+            margin-bottom: 15px;
+        }
+
+        /* Resources Section */
+        .resources {
+            background-color: var(--pale-green);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .resource-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .resource-icon {
+            font-size: 3rem;
+            color: var(--accent-green);
+            margin-bottom: 20px;
+        }
+
+        .resource-card h3 {
+            color: var(--medium-green);
+            margin-bottom: 15px;
+        }
+
+        .resource-card p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Seasonal Tips */
+        .seasonal-tips {
+            background-color: white;
+        }
+
+        .tips-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .tip-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--pale-green);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .tip-card h3 {
+            color: var(--medium-green);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tip-card h3 i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        .tip-card ul {
+            list-style-type: none;
+        }
+
+        .tip-card li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tip-card li:before {
+            content: '•';
+            color: var(--accent-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-green);
+            color: var(--text-light);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: var(--accent-green);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent-green);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .contact-info li i {
+            margin-right: 10px;
+            color: var(--accent-green);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-green);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .tips-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--dark-green);
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease;
+            }
+
+            nav.active {
+                max-height: 300px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 20px 0;
+            }
+
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .emergency-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .emergency-text {
+                text-align: center;
+            }
+
+            .article-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                margin-bottom: 30px;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .emergency-contact {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-tree" style="font-size: 2rem; color: var(--accent-green); margin-right: 10px;"></i>
+                <h1>Arb<span>Care</span></h1>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section - Same as index.html -->
+    <section class="hero">
+        <div class="container">
+            <h2>Resources & Blog</h2>
+            <p>Expert advice, seasonal tips, and industry insights from our team of certified arborists</p>
+            <div class="hero-btns">
+                <a href="index.html#contact" class="btn">Get a Free Quote</a>
+                <a href="#article" class="btn btn-secondary-hero">Read Our Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section - Same as index.html -->
+    <section class="emergency">
+        <div class="container">
+            <div class="emergency-content">
+                <div class="emergency-text">
+                    <h3>24/7 Emergency Tree Services</h3>
+                    <p>Storm damage? Fallen tree? We provide immediate response for hazardous tree situations.</p>
+                </div>
+                <div class="emergency-contact">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="phone">01226 123 456</div>
+                    <a href="tel:01226123456" class="btn btn-call">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single Article Section -->
+    <section class="article" id="article">
+        <div class="container">
+            <div class="article-container">
+                <div class="article-header">
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> March 15, 2023</span>
+                        <span><i class="far fa-clock"></i> 8 min read</span>
+                        <span><i class="far fa-user"></i> John Arbinson</span>
+                    </div>
+                    <h1 class="article-title">Understanding Tree Preservation Orders: A Complete Guide for Homeowners</h1>
+                </div>
+                
+                <div class="article-image">
+                    <img src="https://images.pexels.com/photos/6653820/pexels-photo-6653820.jpeg" alt="Tree Preservation">
+                </div>
+                
+                <div class="article-content">
+                    <p>As a homeowner, you might be surprised to learn that you don't always have the final say about what happens to the trees on your property. Tree Preservation Orders (TPOs) are legal protections that can significantly impact your ability to manage or remove trees, even on your own land.</p>
+                    
+                    <h2>What Exactly is a Tree Preservation Order?</h2>
+                    
+                    <p>A Tree Preservation Order is made by a local planning authority to protect specific trees, groups of trees, or woodlands in the interests of amenity. Once a TPO is in place, it becomes an offence to cut down, top, lop, uproot, wilfully damage, or wilfully destroy a tree without the local planning authority's written consent.</p>
+                    
+                    <p>TPOs can apply to any type of tree, but they're most commonly used to protect trees that have significant public visual amenity value. This could be because of their size, form, future potential, or because they're a rare species.</p>
+                    
+                    <h3>Why Are TPOs Created?</h3>
+                    
+                    <p>Local authorities create TPOs for several important reasons:</p>
+                    
+                    <ul>
+                        <li><strong>Visual Amenity:</strong> Trees that contribute significantly to the appearance of an area</li>
+                        <li><strong>Historical Significance:</strong> Trees with connections to local history or heritage</li>
+                        <li><strong>Ecological Value:</strong> Trees that provide important habitats for wildlife</li>
+                        <li><strong>Environmental Benefits:</strong> Trees that contribute to air quality, noise reduction, or flood prevention</li>
+                        <li><strong>Landmark Status:</strong> Trees that are local landmarks or have particular aesthetic value</li>
+                    </ul>
+                    
+                    <h2>How to Check if Your Tree Has a TPO</h2>
+                    
+                    <p>Before undertaking any tree work, it's crucial to check whether any trees on your property are protected. Here's how:</p>
+                    
+                    <ol>
+                        <li><strong>Contact Your Local Planning Authority:</strong> They maintain a register of all TPOs in their area</li>
+                        <li><strong>Check Online:</strong> Many councils now have online maps showing TPO locations</li>
+                        <li><strong>Look for Notices:</strong> When a TPO is made, the council must serve notice on affected landowners</li>
+                        <li><strong>Consult a Professional:</strong> Arborists like our team at ArbCare can help you determine TPO status</li>
+                    </ol>
+                    
+                    <blockquote>
+                        "I've seen too many homeowners face substantial fines for working on protected trees without permission. Always check first - it could save you thousands of pounds and legal headaches."
+                        <cite>- John Arbinson, Founder of ArbCare</cite>
+                    </blockquote>
+                    
+                    <h2>What Happens if You Breach a TPO?</h2>
+                    
+                    <p>Working on a protected tree without permission is a serious offence that can lead to:</p>
+                    
+                    <ul>
+                        <li><strong>Substantial Fines:</strong> Currently up to £20,000 per tree in a magistrates' court</li>
+                        <li><strong>Unlimited Fines:</strong> In crown court cases for more serious offences</li>
+                        <li><strong>Replacement Planting:</strong> You may be required to replace any trees removed</li>
+                        <li><strong>Criminal Record:</strong> For individuals found guilty of offences</li>
+                    </ul>
+                    
+                    <h2>Applying for TPO Consent</h2>
+                    
+                    <p>If you need to carry out work on a protected tree, you'll need to apply to your local planning authority for consent. The application should include:</p>
+                    
+                    <ul>
+                        <li>Detailed information about the tree(s) and proposed work</li>
+                        <li>Reasons for the proposed work</li>
+                        <li>A plan identifying the tree(s)</li>
+                        <li>Supporting documentation, such as an arborist's report</li>
+                    </ul>
+                    
+                    <p>Valid reasons for tree work might include:</p>
+                    
+                    <ul>
+                        <li>The tree is dead, dying, or dangerous</li>
+                        <li>It's causing structural damage to buildings</li>
+                        <li>It's obstructing light or views (though this is rarely sufficient alone)</li>
+                        <li>It's diseased and posing a risk to other trees</li>
+                    </ul>
+                    
+                    <h2>Conservation Areas</h2>
+                    
+                    <p>It's also important to note that if you live in a conservation area, all trees with a stem diameter of more than 75mm (measured at 1.5m above ground) are automatically protected. You must give the local planning authority six weeks' notice before carrying out any work on these trees.</p>
+                    
+                    <h2>Working with Professionals</h2>
+                    
+                    <p>At ArbCare, we have extensive experience working with TPOs and conservation area regulations. Our certified arborists can:</p>
+                    
+                    <ul>
+                        <li>Help you determine if your trees are protected</li>
+                        <li>Prepare and submit TPO applications on your behalf</li>
+                        <li>Provide professional reports supporting your application</li>
+                        <li>Carry out approved work to the highest standards</li>
+                        <li>Advise on tree management that balances your needs with preservation requirements</li>
+                    </ul>
+                    
+                    <p>Remember, tree preservation exists to protect our valuable natural heritage for future generations. While it can sometimes feel restrictive, these protections ensure that significant trees continue to benefit our communities and environment.</p>
+                    
+                    <div class="article-cta">
+                        <h3>Need Help with a Protected Tree?</h3>
+                        <p>Our team of certified arborists can help you navigate TPO regulations and get the necessary permissions for your tree work.</p>
+                        <a href="index.html#contact" class="btn">Contact Us Today</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources">
+        <div class="container">
+            <h2 class="section-title">Helpful Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-download"></i>
+                    </div>
+                    <h3>Tree Care Guides</h3>
+                    <p>Download our comprehensive guides on tree planting, maintenance, and seasonal care for different tree species.</p>
+                    <a href="#" class="btn btn-secondary">Download Now</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Cost Estimator</h3>
+                    <p>Use our interactive tool to get an approximate cost for common tree services based on your specific needs.</p>
+                    <a href="#" class="btn btn-secondary">Try Our Calculator</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Ask an Arborist</h3>
+                    <p>Have a specific tree-related question? Our certified arborists are here to provide expert advice.</p>
+                    <a href="index.html#contact" class="btn btn-secondary">Ask a Question</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Tips -->
+    <section class="seasonal-tips">
+        <div class="container">
+            <h2 class="section-title">Seasonal Tree Care Tips</h2>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <h3><i class="fas fa-sun"></i> Spring</h3>
+                    <ul>
+                        <li>Inspect trees for winter damage</li>
+                        <li>Prune flowering trees after blooms fade</li>
+                        <li>Apply mulch around base of trees</li>
+                        <li>Check for pest infestations</li>
+                        <li>Plant new trees as soil warms</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3><i class="fas fa-umbrella-beach"></i> Summer</h3>
+                    <ul>
+                        <li>Water young trees during dry spells</li>
+                        <li>Monitor for signs of drought stress</li>
+                        <li>Light pruning to remove damaged branches</li>
+                        <li>Inspect for fungal diseases</li>
+                        <li>Avoid heavy pruning in hot weather</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3><i class="fas fa-leaf"></i> Autumn</h3>
+                    <ul>
+                        <li>Prime time for tree planting</li>
+                        <li>Rake and dispose of fallen leaves</li>
+                        <li>Structural pruning for tree form</li>
+                        <li>Prepare trees for winter storms</li>
+                        <li>Fertilize if soil tests indicate need</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3><i class="fas fa-snowflake"></i> Winter</h3>
+                    <ul>
+                        <li>Dormant season ideal for major pruning</li>
+                        <li>Protect young trees from frost</li>
+                        <li>Check for damage after storms</li>
+                        <li>Plan spring planting projects</li>
+                        <li>Inspect trees when leaves are gone</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ArbCare Tree Surgery</h3>
+                    <p>Providing professional tree care services with over 15 years of experience. Committed to safety, quality, and environmental responsibility.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Tree Pruning</a></li>
+                        <li><a href="#">Tree Removal</a></li>
+                        <li><a href="#">Stump Grinding</a></li>
+                        <li><a href="#">Emergency Services</a></li>
+                        <li><a href="#">Tree Health Assessment</a></li>
+                        <li><a href="#">Hedge Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>United Kingdom</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>01226 123 456</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>arbcare@mail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ArbCare Tree Surgery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
