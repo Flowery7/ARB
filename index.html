@@ -2,6 +2,52 @@
 <html lang="en">
 <head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0WFTM50DDN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0WFTM50DDN');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P93R2DFS');</script>
+<!-- End Google Tag Manager -->
+
+
+
+  
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  
+  // Default to denying analytics storage until consent is given
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted'
+  });
+
+  // Load Google Analytics script but it won't set cookies without consent
+  (function() {
+    var gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-';
+    document.head.appendChild(gaScript);
+    
+    gtag('js', new Date());
+    // Note: We're NOT calling gtag('config', 'G-8LLBT') here yet
+    // This will be called only after consent is given
+  })();
+</script>
 
 
 <meta charset="UTF-8">
@@ -1038,11 +1084,7 @@ input:checked + .preference-slider:before {
     </style>
 </head>
 <body>
-
-
-
-
-<body class="min-h-screen font-poppins">
+<body class="min-h-screen font-poppins"></body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
